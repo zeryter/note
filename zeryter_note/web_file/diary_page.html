@@ -1,0 +1,13 @@
+{% extends 'base_page.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="company_details">
+        {% if di.published_date %}
+            {{ di.refresh_time }}
+        {% endif %}
+        <h4 class="clr1">{{ di.title }}</h4>
+        <p class="cmpny1">{{ di.text | linebreaks }}</p>
+        <span>{{ di.refresh_time }}</span>
+    </div>
+{% endblock %}
+
