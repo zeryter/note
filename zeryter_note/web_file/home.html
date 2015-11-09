@@ -84,11 +84,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			 <div class="company_details">
                  {% for diary in diarys %}
 				    <h4 ><a href="{% url 'diary.webpage.diary_views' pk=diary.pk %}">{{ diary.title }}</a><span>{{ diary.creat_time }}</span></h4>
-				    <p class="cmpny1">
-                        {{ diary.text | linebreaks }}
-                        </br>
-                    <span>{{ diary.refresh_time }}</span></p>
-                     </br>
+{#				    <p class="cmpny1">#}
+{#                        {{ diary.text | linebreaks }}#}
+{#                        </br>#}
+                    <p class="cmpny1"><span>{{ diary.refresh_time }}</span></p>
                      </br>
                  {% endfor %}
 			 </div>
