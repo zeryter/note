@@ -1,11 +1,12 @@
 {% extends 'base_page.html' %}
 {% block content %}
-    <div id="demo1" class="jMax">
+    <div class="jMax">
         <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <div class="jMax-submit" style="float: right;">
-                <input type="submit" class="enabled" value="保存">
+            <div class="jMax-submit">
+                <input type="checkbox" style="float: left;" value="草稿箱" name="diary" title="diary">存草稿箱
+                <input type="submit" style="float: right;" class="enabled"/>
             </div>
         </form>
     </div>
